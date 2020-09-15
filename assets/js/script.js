@@ -186,7 +186,7 @@
 
 			}, 1200 );
         },
-        
+
         /**
 		 * Selected Activate Plugins Case
 		 */
@@ -201,9 +201,8 @@
                 selectedPlugins.push( $( this ).data( 'slug' ) );
             } );
 
-			// Transform the 'Activate' button into an 'Deactivate' button.
 			var activatingText = SwitcherLocalizer.switcher_activating_text;
-			var deactivateText = SwitcherLocalizer.switcher_all_deactivate_text;
+			var activateText = SwitcherLocalizer.switcher_selected_activate_text;
             var switcherNonce = SwitcherLocalizer.switcher_nonce;
             var failedText = SwitcherLocalizer.switcher_failed_text;
 
@@ -225,7 +224,7 @@
 
                 if( result.success ) {
                     message.removeClass( 'button-disabled updated-message' );
-                    message.text( deactivateText );
+                    message.text( activateText );
                     location.reload();
                 } else {
                     message.removeClass( 'updating-message' );
@@ -250,7 +249,7 @@
 
 			// Transform the 'Activate' button into an 'Deactivate' button.
 			var deactivatingText = SwitcherLocalizer.switcher_deactivating_text;
-			var deactivateText = SwitcherLocalizer.switcher_all_deactivate_text;
+			var deactivateText = SwitcherLocalizer.switcher_selected_deactivate_text;
             var switcherNonce = SwitcherLocalizer.switcher_nonce;
             var failedText = SwitcherLocalizer.switcher_failed_text;
 

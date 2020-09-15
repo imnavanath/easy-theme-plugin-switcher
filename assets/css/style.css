@@ -43,13 +43,13 @@
     position: absolute;
     top: 30px;
     right: 0px;
-    color: #111111;
+    color: #ffffff;
     font-size: 36px;
     margin-left: 0px;
 }
 
 .wp-tp-sidenav .closebtn:hover, .wp-tp-sidenav .closebtn:focus, .wp-tp-sidenav .closebtn:active {
-    color: #111111;
+    color: #ffffff;
     box-shadow: unset;
 }
 
@@ -59,11 +59,25 @@
 }
 
 #wp-switcher-toggle-wrap .load_switcher {
-    font-size:30px;
-    cursor:pointer;
+    font-size: 20px;
+    cursor: pointer;
     position: fixed;
-    right: 20px;
+    right: -10px;
     bottom: 50%;
+    border-radius: 50% 0 0 50%;
+    color: #acb2b6;
+    padding: 15px 20px 15px 15px;
+    background: #32373c;
+    transition: all 0.2s;
+}
+
+#wp-switcher-toggle-wrap .load_switcher:hover {
+    color: #ffffff;
+    right: 0px;
+}
+
+.wp-single-plugin input[type="checkbox"] {
+    margin-right: 10px;
 }
 
 .asstes-tab {

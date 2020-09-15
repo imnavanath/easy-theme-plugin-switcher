@@ -150,7 +150,7 @@ class Easy_WP_TP_Switcher_Config {
 
         $html .= '</div>';
 
-        $html .= '<div id="wp-switcher-toggle-wrap"> <span class="load_switcher">&#9776; Open</span> </div>';
+        $html .= '<div id="wp-switcher-toggle-wrap"> <span class="load_switcher">&#9776;</span> </div>';
 
         echo $html;
     }
@@ -168,9 +168,11 @@ class Easy_WP_TP_Switcher_Config {
             'ajaxurl'                    => admin_url( 'admin-ajax.php' ),
             'switcher_nonce'             => wp_create_nonce( 'wp-switcher-manager-nonce' ),
             'switcher_activate_text'     => __( 'Activate', 'easy-wp-tp-switcher' ),
-            'switcher_all_activate_text'     => __( 'Activate All', 'easy-wp-tp-switcher' ),
             'switcher_deactivate_text'   => __( 'Deactivate', 'easy-wp-tp-switcher' ),
+            'switcher_all_activate_text'     => __( 'Activate All', 'easy-wp-tp-switcher' ),
             'switcher_all_deactivate_text'     => __( 'Deactivate All', 'easy-wp-tp-switcher' ),
+            'switcher_selected_activate_text'     => __( 'Activate Selected', 'easy-wp-tp-switcher' ),
+            'switcher_selected_deactivate_text'     => __( 'Deactivate Selected', 'easy-wp-tp-switcher' ),
             'switcher_activating_text'   => __( 'Activating', 'easy-wp-tp-switcher' ),
             'switcher_deactivating_text' => __( 'Deactivating', 'easy-wp-tp-switcher' ),
             'switcher_failed_text'       => __( 'Failed', 'easy-wp-tp-switcher' ),
