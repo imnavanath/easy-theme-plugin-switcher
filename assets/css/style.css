@@ -1,15 +1,12 @@
 .wp-tp-sidenav {
     height: 100%;
     width: 0;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #23282d;
-    border-left: 1px solid #ddd;
+    background-color: #1d2327;
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
 }
 
 .wp-theme-wrapper, .wp-plugin-wrapper {
@@ -67,13 +64,15 @@
     border-radius: 50% 0 0 50%;
     color: #acb2b6;
     padding: 15px 20px 15px 15px;
-    background: #32373c;
-    transition: all 0.2s;
+    background: #1d2327;;
+}
+
+#wp-switcher-toggle-wrap .load_switcher.wp-switcher-sidenav-opened {
+    right: 320px;
 }
 
 #wp-switcher-toggle-wrap .load_switcher:hover {
     color: #ffffff;
-    right: 0px;
 }
 
 .wp-single-plugin input[type="checkbox"] {
@@ -115,6 +114,7 @@
 
 .wp-plugin-wrapper, .wp-theme-wrapper {
     display: none;
+    background: #1d2327;
 }
 
 .wp-plugin-wrapper.active-asset, .wp-theme-wrapper.active-asset {

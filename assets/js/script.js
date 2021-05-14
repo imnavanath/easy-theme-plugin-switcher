@@ -16,7 +16,7 @@
 
 		init: function() {
             $( document ).delegate( ".load_switcher", "click", EasyWPTPSwitcherAdmin.open );
-            $( document ).delegate( ".closebtn", "click", EasyWPTPSwitcherAdmin.close );
+            $( document ).delegate( ".wp-switcher-sidenav-opened", "click", EasyWPTPSwitcherAdmin.close );
 			$( document ).delegate( ".asstes-tab", "click", EasyWPTPSwitcherAdmin.toggle_tab );
 
 			this._bind();
@@ -391,6 +391,16 @@
 			e.stopPropagation();
 			e.preventDefault();
 
+            if( $(this).hasClass( 'wp-switcher-sidenav-opened' ) ) {
+                $(this).removeClass( 'wp-switcher-sidenav-opened' );
+                $( this ).text('☰');
+                $(this).addClass( 'wp-switcher-sidenav-closed' );
+            } else {
+                $(this).removeClass( 'wp-switcher-sidenav-closed' );
+                $( this ).text('✕');
+                $(this).addClass( 'wp-switcher-sidenav-opened' );
+            }
+
             $( '#wp-switcher-sidenav' ).css('width', '320px');
             $( '#wp-switcher-toggle-wrap' ).css('margin-left', '320px');
         },
@@ -402,6 +412,8 @@
 
 			e.stopPropagation();
 			e.preventDefault();
+
+            // $( '#wp-switcher-toggle-wrap .load_switcher' ).css('right', '-10px');
 
             $( '#wp-switcher-sidenav' ).css('width', '0px');
             $( '#wp-switcher-toggle-wrap' ).css('margin-left', '0px');

@@ -78,7 +78,7 @@ class Easy_WP_TP_Switcher_Config {
         $active_theme = get_template();
         $installed_themes = wp_get_themes();
 
-        $html .= '<div id="wp-switcher-sidenav" class="wp-tp-sidenav"> <a href="javascript:void(0)" class="closebtn">&times;</a>';
+        $html .= '<div id="wp-switcher-sidenav" class="wp-tp-sidenav">';
 
         $html .= '<ul class="asstes-tab">';
 
