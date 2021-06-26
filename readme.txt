@@ -4,6 +4,7 @@ Tags: theme, plugin, theme plugin switcher, update theme plugin
 Requires at least: 3.0
 Tested up to: 5.7.2
 Stable tag: 1.0.0
+License: GNU Version 2 or Any Later Version
 
 Easy Theme Plugin Switcher allows you to toggle activate/deactivate theme, plugins only with one single click.
 
