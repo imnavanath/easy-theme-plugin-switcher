@@ -38,13 +38,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Easy_Theme_Plugin_Switcher_Loader {
 
 	/**
-	 * Member Variable
-	 *
-	 * @var instance
-	 */
-    private static $instance = null;
-
-    /**
 	 * Constructor
 	 *
 	 * @since 1.0.0
@@ -61,10 +54,10 @@ class Easy_Theme_Plugin_Switcher_Loader {
 
 		add_action( 'plugins_loaded', array( $this, 'load_plugin' ), 99 );
 
-        add_action( 'admin_init', array( $this, 'init' ) );
-    }
+		add_action( 'admin_init', array( $this, 'init' ) );
+	}
 
-    /**
+	/**
 	 * Initialize update compatibility.
 	 *
 	 * @since x.x.x
@@ -92,9 +85,9 @@ class Easy_Theme_Plugin_Switcher_Loader {
 		update_option( 'easy-wp-tp-switcher-version', EASY_THEME_PLUGIN_SWITCHER_VER );
 
 		do_action( 'easy_wp_theme_plugin_switcher_after_update' );
-    }
+	}
 
-    /**
+	/**
 	 * Defines all constants
 	 *
 	 * @since 1.0.0
@@ -106,8 +99,8 @@ class Easy_Theme_Plugin_Switcher_Loader {
 		define( 'EASY_THEME_PLUGIN_SWITCHER_DIR', plugin_dir_path( EASY_THEME_PLUGIN_SWITCHER_FILE ) );
 		define( 'EASY_THEME_PLUGIN_SWITCHER_URL', plugins_url( '/', EASY_THEME_PLUGIN_SWITCHER_FILE ) );
 	}
-    
-    /**
+
+	/**
 	 * Loads plugin files.
 	 *
 	 * @since 1.0.0
@@ -115,14 +108,14 @@ class Easy_Theme_Plugin_Switcher_Loader {
 	 */
 	function load_plugin() {
 
-        // Load textdomain for internationalization.
-        $this->load_textdomain();
+		// Load textdomain for internationalization.
+		$this->load_textdomain();
 
-        // Load plugin core files.
+		// Load plugin core files.
 		$this->load_core_files();
-    }
+	}
 
-    /**
+	/**
 	 * Load Core Files for Easy WP Theme Plugin Switcher.
 	 *
 	 * @since 1.0.0
@@ -131,10 +124,10 @@ class Easy_Theme_Plugin_Switcher_Loader {
 	 */
 	public function load_core_files() {
 
-        include_once EASY_THEME_PLUGIN_SWITCHER_DIR . 'classes/class-wp-tp-switcher-config.php';   
-    }
+		include_once EASY_THEME_PLUGIN_SWITCHER_DIR . 'classes/class-easy-theme-plugin-switcher-config.php';
+	}
 
-    /**
+	/**
 	 * Load Easy WP Theme Plugin Switcher Text Domain.
 	 * This will load the translation textdomain depending on the file priorities.
 	 *      1. Global Languages /wp-content/languages/easy-theme-plugin-switcher/ folder
@@ -151,9 +144,9 @@ class Easy_Theme_Plugin_Switcher_Loader {
 		 */
 		$lang_dir = apply_filters( 'wp_widget_styler_domain_loader', EASY_THEME_PLUGIN_SWITCHER_ROOT . '/languages/' );
 		load_plugin_textdomain( 'easy-wp-tp-switcher', false, $lang_dir );
-    }
-    
-    /**
+	}
+
+	/**
 	 * Activation Reset
 	 *
 	 * @since 1.0.0
