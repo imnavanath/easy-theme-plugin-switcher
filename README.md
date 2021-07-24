@@ -3,7 +3,7 @@
 **Tags:** theme, plugin, theme plugin switcher, update theme plugin  
 **Requires at least:** 3.0  
 **Requires PHP:** 5.3  
-**Tested up to:** 5.7.2  
+**Tested up to:** 5.8  
 **Stable tag:** 1.0.0  
 **License:** GNU Version 2 or Any Later Version  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
